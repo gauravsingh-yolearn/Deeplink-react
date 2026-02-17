@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import type { ReactNode } from "react";
 
 
@@ -13,12 +13,10 @@ export const AuthContext = createContext<AuthContextType>(
 );
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    useEffect(() => {
+    const [isLoggedIn, setIsLoggedIn] = useState(() => {
         const token = localStorage.getItem("token");
-        setIsLoggedIn(!!token);
-    }, []);
+        return !!token;
+    });
 
     const login = () => {
         localStorage.setItem("token", "dummy");

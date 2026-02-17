@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.yolearntech.DeeplinkingReactNative",
+            "sha256_cert_fingerprints": [
+                "A0:7D:29:51:51:EA:BE:1B:33:20:B3:C4:CE:56:BE:F9:3D:0D:34:76:0D:0E:27:53:C3:45:61:5E:A1:CC:CB:26"
+            ]
+        }
+    }
+]
